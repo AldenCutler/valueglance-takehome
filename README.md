@@ -40,15 +40,14 @@ The application is deployed on Render and can be accessed at [https://valueglanc
     npm run dev
     ```
 
-2. Open your browser and navigate to `http://localhost:3000`.
+2. Open your browser and navigate to `http://localhost:5173`.
 
-## Scripts
+## Build
 
-- `npm run dev`: Starts the development server.
-- `npm run build`: Builds the project for production.
-- `npm run lint`: Lints the codebase using ESLint.
-- `npm run preview`: Previews the production build.
-
+To build the application for production, run:
+```sh
+npm run build
+```
 
 ## Technologies Used
 
