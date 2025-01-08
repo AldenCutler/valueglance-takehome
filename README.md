@@ -1,6 +1,6 @@
 # ValueGlance
 
-ValueGlance is a React application that fetches and displays financial data for a specified company. The data is fetched from the Financial Modeling Prep API and displayed in a table with filtering and sorting capabilities.
+This is a React application made as a take-home assignment from ValueGlance that fetches and displays financial data for a specified company. The data is fetched from the Financial Modeling Prep API and displayed in a table with filtering and sorting capabilities.
 
 ## Features
 

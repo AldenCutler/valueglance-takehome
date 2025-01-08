@@ -1,7 +1,7 @@
-import './App.css';
 import { useState, useEffect } from 'react';
 
 // get API_URL from .env file
+// dotenv seems to be broken currently with create-react-app, so I ported everything from cra to vite.
 const env = process.env;
 
 // for currency formatting
@@ -35,8 +35,6 @@ function App() {
   });
   const [sortConfig, setSortConfig] = useState({ key: 'date', direction: 'descending' });
 
-  // console.log(env.API_URL);
-
   // fetch data from the API
   useEffect(() => {
     fetch(env.API_URL)
@@ -46,7 +44,6 @@ function App() {
         setFilteredData(json);
       })
       .catch(error => {
-        console.error('Error fetching data:', error); // Error handling
         alert('Error fetching data. Please try again later. Error code: ' + error);
       });
   }, []);
@@ -104,7 +101,7 @@ function App() {
   };
 
   return (
-    <div className="App xl:flex xl:flex-row h-full w-full">
+    <div className="App xl:flex xl:flex-row h-full w-full text-left">
       <div className='mx-4'>
         {/* Filters */}
         <h1 className='text-left my-4 text-2xl'>Filters:</h1>
@@ -119,7 +116,6 @@ function App() {
       </div>
 
       {/* Table Display */}
-      {/* shows a loading spinner until data is available, then renders the table */}
       {filteredData ? (
         <>
           <hr className='sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl mx-4 my-4' />
